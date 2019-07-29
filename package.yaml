@@ -1,0 +1,73 @@
+name: hive
+
+dependencies:
+  - base == 4.*
+  - tasty
+  - grid
+  - unordered-containers
+
+# executables:
+#   hive:
+#     main: Main.hs
+#     source-dirs: src
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Hive
+
+tests:
+  tests:
+    main: Tests.hs
+    source-dirs:
+      - tests
+    dependencies:
+      - HUnit
+      - tasty
+      - tasty-hunit
+      - hive
+
+ghc-options:
+  - -O2
+  - -threaded
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+
+default-extensions:
+  - ApplicativeDo
+  - BangPatterns
+  - ConstraintKinds
+  - DataKinds
+  - DefaultSignatures
+  - DeriveFoldable
+  - DeriveFunctor
+  - DeriveGeneric
+  - DeriveLift
+  - DeriveTraversable
+  - DerivingStrategies
+  - EmptyCase
+  - ExistentialQuantification
+  - FlexibleContexts
+  - FlexibleInstances
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - InstanceSigs
+  - KindSignatures
+  - LambdaCase
+  - MultiParamTypeClasses
+  - MultiWayIf
+  - NamedFieldPuns
+  - OverloadedStrings
+  - PatternSynonyms
+  - RankNTypes
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TupleSections
+  - TypeApplications
+  - TypeFamilies
+  - TypeFamilyDependencies
+  - TypeOperators
